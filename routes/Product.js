@@ -1,14 +1,14 @@
 const router= require("express").Router();
-const {Product_all} = require('../controllers/productController');
+const {Product_all, Product_details,Product_create,Product_delete} = require('../controllers/productController');
 
 router.get("/",(req, res, next) => {
     console.log("In the middleware");
     next();
 },Product_all);
-router.post("/");
-router.get("/:productId");
+router.post("/",Product_create);
 router.put("/productId");
-router.delete("/productId");
+router.delete("/:productId",Product_delete);
 
+router.get("/:productId",Product_details);
 
 module.exports=router;
