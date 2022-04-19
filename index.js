@@ -26,6 +26,12 @@ run();
 const productRoutes=require("./routes/Product");
 
 //route Middlewares
+app.use(express.json());
+app.use(express.urlencoded());
 app.use("/api/products",productRoutes);
+//create
+app.post("/create",(req,res)=>{
+    console.log(req.body);
+});
 
 app.listen(4000,()=>console.log("server up and running on port 4000!"));

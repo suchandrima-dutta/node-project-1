@@ -5,7 +5,7 @@ router.get("/",(req, res, next) => {
     console.log("In the middleware");
     next();
 },Product_all);
-router.post("/",Product_create);
+router.post("/create",Product_create);
 router.put("/productId");
 router.delete("/:productId",Product_delete);
 

@@ -26,10 +26,25 @@ const Product_details=async (req,res)=>{
 };
 //Add New product
 const Product_create=async  (req,res)=>{
-    console.log("The request");
+    console.log("The request",req.body);
     
     try{
-const products = await Product.create({"details":"JUST Blue, 6GB RAM, 128GB STORAGE","image":"https://vlebazaar.in/image/cache/catalog//B08CFSZLQ4/Google-Pixel-4a-j...","price":"RS. 25,000","title":"GOOGLE PIXEL 4A (JUST BLACK, 6GB RAM, 128GB STORAGE)"});
+        const savedProduct=await Product.create(req.body);
+
+        res.send(savedProduct);
+    }
+    catch (error){
+        res.status(400).send(error);
+    }
+    
+   
+
+};
+//Update product
+const Product_update=async (req,res)=>{
+    console.log("The request");
+    try{
+        const products = await Product.findOne({_id:req.params.productId});
         console.log(" Products are",products)
         res.json(products);
     }
@@ -37,9 +52,8 @@ const products = await Product.create({"details":"JUST Blue, 6GB RAM, 128GB STOR
         res.json({message: error});
     }
 
+
 };
-//Update product
-const Product_update=async (req,res)=>{};
 //Delete product
 const Product_delete=async (req,res)=>{
     console.log("The request");
