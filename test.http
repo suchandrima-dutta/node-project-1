@@ -14,4 +14,14 @@ GET http://localhost:4000/api/products
 ###
 DELETE http://localhost:4000/api/products/62518b484aecc0fad823e06b  HTTP/1.1
 ###
-PUT http://localhost:4000/api/products/625e6d3b182deab6b8efd421 HTTP/1.
+PUT http://localhost:4000/api/products/625e636ffbdae2d9a8686d61 
+Content-Type: application/json
+{
+    
+    "title":"Intel",
+    "price":"RS.30000",
+    "image":"https://google.com",
+    "details":"just blue,128 GB Storage"
+   
+}
+

@@ -44,9 +44,10 @@ const Product_create=async  (req,res)=>{
 const Product_update=async (req,res)=>{
     console.log("The request",req.params.productId,req.body);
     try{
-        const products = await Product.findOneAndUpdate({_id:req.params.productId},{$set:req.body});
-        console.log(" Products are",products)
-        res.json(products);
+       
+        const updatedproduct = await Product.findByIdAndUpdate({_id:req.params.productId},{$set:req.body});
+        console.log(" Products are",Product)
+        res.json(updatedproduct);
     }
     catch(error){
         res.json({message: error});
