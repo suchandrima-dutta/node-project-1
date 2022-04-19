@@ -42,9 +42,9 @@ const Product_create=async  (req,res)=>{
 };
 //Update product
 const Product_update=async (req,res)=>{
-    console.log("The request");
+    console.log("The request",req.params.productId,req.body);
     try{
-        const products = await Product.findOne({_id:req.params.productId});
+        const products = await Product.findOneAndUpdate({_id:req.params.productId},{$set:req.body});
         console.log(" Products are",products)
         res.json(products);
     }
