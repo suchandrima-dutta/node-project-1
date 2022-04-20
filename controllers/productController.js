@@ -45,7 +45,7 @@ const Product_update=async (req,res)=>{
     console.log("The request",req.params.productId,req.body);
     try{
        
-        const updatedproduct = await Product.findByIdAndUpdate({_id:req.params.productId},{$set:req.body});
+        const updatedproduct = await Product.findByIdAndUpdate({_id:req.params.productId},{$set:req.body},{upsert:true});
         console.log(" Products are",Product)
         res.json(updatedproduct);
     }

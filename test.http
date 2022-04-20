@@ -4,21 +4,21 @@ GET http://localhost:4000/api/products/62518b484aecc0fad823e06b
 POST http://localhost:4000/api/products/create
 Content-Type: application/json
 {
-    "title":"google",
-    "price":"RS.20000",
+    "title":"google a",
+    "price":"RS.26000",
     "image":"https://google.com",
     "details":"just blue,128 GB Storage"
 }
 ###
 GET http://localhost:4000/api/products
 ###
-DELETE http://localhost:4000/api/products/625d80364cfa3d5bda5d00cf  HTTP/1.1
+DELETE http://localhost:4000/api/products/625d77fba28c0a1766682511  HTTP/1.1
 ###
-PUT http://localhost:4000/api/products/625d78d4c2a1a9d243ee9164
+PUT http://localhost:4000/api/products/625f9bbf407a413c72f66b7f
 Content-Type: application/json
 {
     
-    "title":"Google Pixel",
+    "title":"API",
     "price":"RS.40000",
     "image":"https://xyz.com",
     "details":"just blue,128 GB Storage"
