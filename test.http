@@ -12,15 +12,15 @@ Content-Type: application/json
 ###
 GET http://localhost:4000/api/products
 ###
-DELETE http://localhost:4000/api/products/62518b484aecc0fad823e06b  HTTP/1.1
+DELETE http://localhost:4000/api/products/625d80364cfa3d5bda5d00cf  HTTP/1.1
 ###
-PUT http://localhost:4000/api/products/625e636ffbdae2d9a8686d61 
+PUT http://localhost:4000/api/products/625d78d4c2a1a9d243ee9164
 Content-Type: application/json
 {
     
-    "title":"Intel",
-    "price":"RS.30000",
-    "image":"https://google.com",
+    "title":"Google Pixel",
+    "price":"RS.40000",
+    "image":"https://xyz.com",
     "details":"just blue,128 GB Storage"
    
 }
